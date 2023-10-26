@@ -43,6 +43,8 @@ confDir = Entry(root)
 confDir.insert(0, conf(0))
 confDir.pack()
 
+confDirConfirm = Button(root, text = "Confirm" , fg = "red", command=lambda: writeBackupDir(confDir.get()))
+confDirConfirm.pack()
 # Last backup time
 lastBackupTitle = Label(root, text="Last backup:", font=("Arial", 15))
 lastBackupTitle.pack()

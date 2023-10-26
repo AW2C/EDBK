@@ -8,12 +8,14 @@ confFile = "C:/Users/"+os.getenv("username")+"/AppData/Local/AW2C/EDBK/config.tx
 global EDdir
 EDdir = "C:/Users/"+os.getenv("Username")+"/AppData/Local/Frontier Developments/Elite Dangerous"
 
-def writeBackupDir(dir):
+def writeBackupDir(dir, button):
     with open(confFile, "r") as f:
         confArr = f.readlines()
         confArr[0] = dir
     with open(confFile, "w") as f:
         f.writelines(confArr)
+    
+    return
 
 def updateLastBackup(time):
     with open(confFile, "r") as f:
